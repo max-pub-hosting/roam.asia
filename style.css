@@ -1,8 +1,22 @@
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-        width: 100%;
-      }
+body {
+	margin: 0;
+	padding: 0;
+}
+#map {
+	height: 100%;
+	width: 100%;
+}
+iframe{
+	position: absolute;
+	top: 1%;
+	height: 98%;
+	// bottom: 10px;
+	width: 14cm;
+	margin-left: -7cm;
+	// margin: 0 auto;
+	border: 1px solid red;
+	// visibility: hidden;
+	z-index: 100;
+	background: white;
+	opacity: 0.95;
+}
