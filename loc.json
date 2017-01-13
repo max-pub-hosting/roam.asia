@@ -1,0 +1,26 @@
+[{
+	"lat": 11.622868,
+	"lon": 123.349184,
+	"url": "/PH/gigantes",
+	"ico": "beach"
+}, {
+	"lat": 11.179880,
+	"lon": 119.390237,
+	"url": "/PH/el-nido",
+	"ico": "beach"
+}, {
+	"lat": 11.963867,
+	"lon": 121.925984,
+	"url": "/PH/boracay",
+	"ico": "beach"
+}, {
+	"lat": 11.153414,
+	"lon": 123.809070,
+	"url": "/PH/bantayan",
+	"ico": "beach"
+}, {
+	"lat": 9.598164,
+	"lon": 123.797592,
+	"url": "/PH/panglao",
+	"ico": "beach"
+}]
