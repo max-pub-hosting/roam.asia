@@ -1,0 +1,15 @@
+a{text-decoration: none; color: black;}
+.letter{ background: #aaf; border-radius: 100px; display: inline-block; color: white; padding: 0 4px;}
+
+.icon-list-item {width: 14cm;}
+.icon-list-item td.img {width:200px;}
+.icon-list-item img{width: 200px;}
+.icon-list-item .text {color: silver; text-align: justify;}
+/*.stay */
+.title {font-weight: bold; font-size: 18px; height: 1px;}
+// .from{text-align: right;}
+.price {text-align: right; color: #7f7; font-weight: bold; white-space: nowrap; text-align: right;}
+.times {color: silver;}
+.duration {color: gray; white-space: nowrap;text-align: right;}
+td{vertical-align: top;}
+.operators>table{width:100%;}

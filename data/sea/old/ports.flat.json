@@ -1,0 +1,146 @@
+{
+	"BAN.BAN": {
+		"region": "Bantayan",
+		"city": "Bantayan",
+		"pier": "",
+		"lat": "11.1651",
+		"lon": "123.71484",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"BAN.SAN": {
+		"region": "Bantayan",
+		"city": "Santa Fe",
+		"pier": "",
+		"lat": "11.16569",
+		"lon": "123.80834",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"BOH.TAG": {
+		"region": "Bohol",
+		"city": "Tagbilaran",
+		"pier": "",
+		"lat": "9.64978",
+		"lon": "123.84672",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.BAT": {
+		"region": "Cebu",
+		"city": "Bato",
+		"pier": "",
+		"lat": "9.45919",
+		"lon": "123.30099",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.CEB.1": {
+		"region": "Cebu",
+		"city": "Cebu",
+		"pier": "1",
+		"lat": "10.29234",
+		"lon": "123.9089",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.CEB.2": {
+		"region": "Cebu",
+		"city": "Cebu",
+		"pier": "2",
+		"lat": "",
+		"lon": "",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.CEB.3": {
+		"region": "Cebu",
+		"city": "Cebu",
+		"pier": "3",
+		"lat": "",
+		"lon": "",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.DAN": {
+		"region": "Cebu",
+		"city": "Daanbantayan",
+		"pier": "",
+		"lat": "11.27953",
+		"lon": "124.03057",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.HAG": {
+		"region": "Cebu",
+		"city": "Hagnaya",
+		"pier": "",
+		"lat": "11.09322",
+		"lon": "123.94571",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.TAB": {
+		"region": "Cebu",
+		"city": "Tabuelan",
+		"pier": "",
+		"lat": "10.832046",
+		"lon": "123.870298",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"CEB.TOL": {
+		"region": "Cebu",
+		"city": "Toledo",
+		"pier": "",
+		"lat": "10.389309",
+		"lon": "123.636843",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"NEG.CAD": {
+		"region": "Negros",
+		"city": "Cadiz",
+		"pier": "",
+		"lat": "10.96139",
+		"lon": "123.31243",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"NEG.TAM": {
+		"region": "Negros",
+		"city": "Tampi",
+		"pier": "",
+		"lat": "9.44134",
+		"lon": "123.2364",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"PAN.EST": {
+		"region": "Panay",
+		"city": "Estancia",
+		"pier": "",
+		"lat": "11.45143",
+		"lon": "123.15467",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"SIQ.SIQ": {
+		"region": "Siquijor",
+		"city": "Siquijor",
+		"pier": "",
+		"lat": "9.218006",
+		"lon": "123.512395",
+		"phoneNumber": "",
+		"email": ""
+	},
+	"SIQ.LAR": {
+		"region": "Siquijor",
+		"city": "Larena",
+		"pier": "",
+		"lat": "9.251103",
+		"lon": "123.591476",
+		"phoneNumber": "",
+		"email": ""
+	}
+}

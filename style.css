@@ -1,10 +1,107 @@
+*{
+	font-family: Helvetica;
+	font-weight: 300;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 }
-#map {
-	height: 100%;
+header{
+	position: absolute;
+	top:0;
+	height:40px;
+	left:0;
+	right:0;
+	background: #333;
+	color: white;
+}
+header>*{
+	display: inline-block;
+}
+header b{
+	font-size: 30px;
+	padding: 3px;
+}
+main{
+	position: absolute;
+	top:40px;
+	// height:40px;
+	left:0;
+	width: 10cm;
+	// right:0;
+	// background: #666;
+	background: white;
+	// color: white;
+	opacity: 0.9;
+	// z-index: 100;
+}
+main>*{
+	font-size:30px;
+	display: inline-block;
+	text-decoration: none;
+}
+#path{
 	width: 100%;
+	border-collapse: collapse;
+	display: block;
+}
+#path td{
+	padding: 1px 3px;
+}
+#path .icon {
+	width: 40px;
+	color: gray;
+	text-align: center;
+}
+#path .region{
+	color: silver;
+}
+#path .close {
+	width: 40px;
+	color: gray;
+	font-weight: bold;
+	text-align: right;
+}
+
+#times {
+	padding: 4px;
+}
+#times h4{
+	padding: 0;
+	margin:0;
+	margin-top: 1cm;
+}
+#times .duration{
+	color: gray;
+	font-size: 20px;
+}
+#times .price{
+	float: right;
+	color: gray;
+	font-size: 20px;
+}
+#times ul{
+	color: silver;
+	font-size: 18px;
+	column-count: 2;
+	margin: 0;
+}
+#times ul li{
+	cursor: pointer;
+}
+#times ul sup{
+	font-size: 15px;
+}
+
+#map {
+	position: absolute;
+	top:40px;
+	left:0;
+	right:0;
+	bottom:0;
+	// height: 100%;
+	// width: 100%;
 }
 // iframe{
 // 	position: absolute;
@@ -26,7 +123,7 @@ iframe{
 	top: 0;
 	left:0;
 	height:100%;
-	width: 12cm;
+	width: 14cm;
 	// border: 1px solid red;
 	border: none;
 	z-index: 100;

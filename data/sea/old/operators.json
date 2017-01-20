@@ -1,0 +1,44 @@
+{
+	"---": {
+		"name": "DummyCompany",
+		"website": "",
+		"email": "",
+		"phoneNumber": ""
+	},
+	"AZN": {
+		"name": "E.B. Aznar Shipping Corporation",
+		"website": "",
+		"email": "",
+		"phoneNumber": "+63 (032) 234 4624"
+	},
+	"CAT": {
+		"name": "FastCat",
+		"website": "fastcat.com.ph",
+		"email": "",
+		"phoneNumber": ""
+	},
+	"ISC": {
+		"name": "Island Shipping Corporation",
+		"website": "",
+		"email": "",
+		"phoneNumber": ""
+	},
+	"JET": {
+		"name": "OceanJet",
+		"website": "www.oceanjet.net",
+		"email": "",
+		"phoneNumber": ""
+	},
+	"MAA": {
+		"name": "Maayo Shipping",
+		"website": "",
+		"email": "",
+		"phoneNumber": "+63 (0915) 644 7453"
+	},
+	"SSF": {
+		"name": "Super Shuttle Ferry",
+		"website": "",
+		"email": "",
+		"phoneNumber": ""
+	}
+}

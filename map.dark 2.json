@@ -1,5 +1,25 @@
 [{
     "featureType": "all",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "saturation": 36
+    }, {
+        "color": "#000000"
+    }, {
+        "lightness": 40
+    }]
+}, {
+    "featureType": "all",
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+        "visibility": "on"
+    }, {
+        "color": "#000000"
+    }, {
+        "lightness": 16
+    }]
+}, {
+    "featureType": "all",
     "elementType": "labels.icon",
     "stylers": [{
         "visibility": "off"
@@ -8,13 +28,19 @@
     "featureType": "administrative",
     "elementType": "geometry.fill",
     "stylers": [{
-        "visibility": "off"
+        "color": "#000000"
+    }, {
+        "lightness": 20
     }]
 }, {
     "featureType": "administrative",
     "elementType": "geometry.stroke",
     "stylers": [{
-        "visibility": "off"
+        "color": "#000000"
+    }, {
+        "lightness": 17
+    }, {
+        "weight": 1.2
     }]
 }, {
     "featureType": "administrative",
@@ -26,23 +52,49 @@
     "featureType": "administrative.country",
     "elementType": "all",
     "stylers": [{
-        "visibility": "off"
+        "visibility": "simplified"
     }]
 }, {
     "featureType": "administrative.country",
-    "elementType": "labels",
+    "elementType": "geometry",
     "stylers": [{
-        "visibility": "on"
+        "visibility": "simplified"
+    }]
+}, {
+    "featureType": "administrative.country",
+    "elementType": "labels.text",
+    "stylers": [{
+        "visibility": "simplified"
     }, {
+        "color": "#f00"
+    }]
+}, {
+    "featureType": "administrative.province",
+    "elementType": "geometry.stroke",
+    "stylers": [{
+        "visibility": "off"
+    }]
+}, {
+    "featureType": "administrative.province",
+    "elementType": "labels.text.fill",
+    "stylers": [{
         "color": "#ff0000"
-    }, {
-        "weight": "7"
+    }]
+}, {
+    "featureType": "administrative.province",
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+        "weight": "3"
     }]
 }, {
     "featureType": "administrative.locality",
     "elementType": "all",
     "stylers": [{
-        "visibility": "off"
+        "visibility": "simplified"
+    }, {
+        "saturation": "-100"
+    }, {
+        "lightness": "30"
     }]
 }, {
     "featureType": "administrative.neighborhood",

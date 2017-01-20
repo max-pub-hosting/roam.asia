@@ -1,0 +1,162 @@
+{
+	"BAN.BAN": {
+		"NEG.CAD": [{
+			"from": "BAN.BAN",
+			"to": "NEG.CAD",
+			"operator": "---",
+			"duration": "500",
+			"price": "2123",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}],
+		"PAN.EST": [{
+			"from": "BAN.BAN",
+			"to": "PAN.EST",
+			"operator": "---",
+			"duration": "23",
+			"price": "673",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"BAN.SAN": {
+		"CEB.HAG": [{
+			"from": "BAN.SAN",
+			"to": "CEB.HAG",
+			"operator": "ISC",
+			"duration": "60",
+			"price": "245",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}, {
+			"from": "BAN.SAN",
+			"to": "CEB.HAG",
+			"operator": "SSF",
+			"duration": "60",
+			"price": "634",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}, {
+			"from": "BAN.SAN",
+			"to": "CEB.HAG",
+			"operator": "AZN",
+			"duration": "90",
+			"price": "346",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"BOH.TAG": {
+		"CEB.CEB.1": [{
+			"from": "BOH.TAG",
+			"to": "CEB.CEB.1",
+			"operator": "JET",
+			"duration": "120",
+			"price": "400",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}],
+		"SIQ.SIQ": [{
+			"from": "BOH.TAG",
+			"to": "SIQ.SIQ",
+			"operator": "",
+			"duration": "",
+			"price": "",
+			"times": [""],
+			"warnings": ""
+		}]
+	},
+	"CEB.HAG": {
+		"BAN.SAN": [{
+			"from": "CEB.HAG",
+			"to": "BAN.SAN",
+			"operator": "ISC",
+			"duration": "60",
+			"price": "170",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}, {
+			"from": "CEB.HAG",
+			"to": "BAN.SAN",
+			"operator": "SSF",
+			"duration": "60",
+			"price": "180",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}, {
+			"from": "CEB.HAG",
+			"to": "BAN.SAN",
+			"operator": "AZN",
+			"duration": "90",
+			"price": "150",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"NEG.CAD": {
+		"BAN.BAN": [{
+			"from": "NEG.CAD",
+			"to": "BAN.BAN",
+			"operator": "---",
+			"duration": "323",
+			"price": "345",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"PAN.EST": {
+		"BAN.BAN": [{
+			"from": "PAN.EST",
+			"to": "BAN.BAN",
+			"operator": "---",
+			"duration": "542",
+			"price": "6774",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"CEB.CEB.1": {
+		"BOH.TAG": [{
+			"from": "CEB.CEB.1",
+			"to": "BOH.TAG",
+			"operator": "JET",
+			"duration": "120",
+			"price": "400",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}]
+	},
+	"CEB.BAT": {
+		"NEG.TAM": [{
+			"from": "CEB.BAT",
+			"to": "NEG.TAM",
+			"operator": "MAA",
+			"duration": "55",
+			"price": "77",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}]
+	},
+	"NEG.TAM": {
+		"CEB.BAT": [{
+			"from": "NEG.TAM",
+			"to": "CEB.BAT",
+			"operator": "MAA",
+			"duration": "55",
+			"price": "77",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}]
+	},
+	"SIQ.SIQ": {
+		"BOH.TAG": [{
+			"from": "SIQ.SIQ",
+			"to": "BOH.TAG",
+			"operator": "",
+			"duration": "",
+			"price": "",
+			"times": [""],
+			"warnings": ""
+		}]
+	}
+}
