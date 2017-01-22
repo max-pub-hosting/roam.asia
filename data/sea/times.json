@@ -1,1 +1,130 @@
-{"BAN.BAN":{"NEG.CAD":[{"operator":"DummyCompany","duration":"500","price":"2123","times":["6:30","8:30","10:30","12:30"],"warnings":""}],"PAN.EST":[{"operator":"DummyCompany","duration":"23","price":"673","times":["6:30","8:30","10:30","12:30"],"warnings":""}]},"BAN.SAN":{"CEB.HAG":[{"operator":"Island Shipping Corporation","duration":"60","price":"245","times":["6:30","8:30","10:30","12:30","14:30","16:30","18:30","20:30"],"warnings":""},{"operator":"Super Shuttle Ferry","duration":"60","price":"634","times":["6:30","8:30","10:30","12:30"],"warnings":""},{"operator":"E.B. Aznar Shipping Corporation","duration":"90","price":"346","times":["6:30","8:30","10:30","12:30"],"warnings":""}]},"BOH.TAG":{"CEB.CEB.1":[{"operator":"OceanJet","duration":"120","price":"400","times":["6:00","7:00","8:00","9:00"],"warnings":""}],"SIQ.SIQ":[{"operator":null,"duration":"","price":"","times":[""],"warnings":""}]},"CEB.HAG":{"BAN.SAN":[{"operator":"Island Shipping Corporation","duration":"60","price":"170","times":["6:30","8:30","10:30","12:30","14:30","16:30","18:30","20:30"],"warnings":""},{"operator":"Super Shuttle Ferry","duration":"60","price":"180","times":["6:30","8:30","10:30","12:30"],"warnings":""},{"operator":"E.B. Aznar Shipping Corporation","duration":"90","price":"150","times":["6:30","8:30","10:30","12:30"],"warnings":""}]},"NEG.CAD":{"BAN.BAN":[{"operator":"DummyCompany","duration":"323","price":"345","times":["6:30","8:30","10:30","12:30"],"warnings":""}]},"PAN.EST":{"BAN.BAN":[{"operator":"DummyCompany","duration":"542","price":"6774","times":["6:30","8:30","10:30","12:30"],"warnings":""}]},"CEB.CEB.1":{"BOH.TAG":[{"operator":"OceanJet","duration":"120","price":"400","times":["6:00","7:00","8:00","9:00"],"warnings":""}]},"CEB.BAT":{"NEG.TAM":[{"operator":"Maayo Shipping","duration":"55","price":"77","times":["6:00","7:00","8:00","9:00"],"warnings":""}]},"NEG.TAM":{"CEB.BAT":[{"operator":"Maayo Shipping","duration":"55","price":"77","times":["6:00","7:00","8:00","9:00"],"warnings":""}]},"SIQ.SIQ":{"BOH.TAG":[{"operator":null,"duration":"","price":"","times":[""],"warnings":""}]}}
+{
+	"BAN.BAN": {
+		"NEG.CAD": [{
+			"operator": "DummyCompany",
+			"duration": "500",
+			"price": "2123",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}],
+		"PAN.EST": [{
+			"operator": "DummyCompany",
+			"duration": "23",
+			"price": "673",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"BAN.SAN": {
+		"CEB.HAG": [{
+			"operator": "Island Shipping Corporation",
+			"duration": "60",
+			"price": "245",
+			"times": ["6:30", "8:30", "10:30", "12:30", "14:30", "16:30", "18:30", "20:30"],
+			"warnings": ""
+		}, {
+			"operator": "Super Shuttle Ferry",
+			"duration": "60",
+			"price": "634",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}, {
+			"operator": "E.B. Aznar Shipping Corporation",
+			"duration": "90",
+			"price": "346",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"BOH.TAG": {
+		"CEB.CEB.1": [{
+			"operator": "OceanJet",
+			"duration": "120",
+			"price": "400",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}],
+		"SIQ.SIQ": [{
+			"operator": null,
+			"duration": "",
+			"price": "",
+			"times": [""],
+			"warnings": ""
+		}]
+	},
+	"CEB.HAG": {
+		"BAN.SAN": [{
+			"operator": "Island Shipping Corporation",
+			"duration": "60",
+			"price": "170",
+			"times": ["6:30", "8:30", "10:30", "12:30", "14:30", "16:30", "18:30", "20:30"],
+			"warnings": ""
+		}, {
+			"operator": "Super Shuttle Ferry",
+			"duration": "60",
+			"price": "180",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}, {
+			"operator": "E.B. Aznar Shipping Corporation",
+			"duration": "90",
+			"price": "150",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"NEG.CAD": {
+		"BAN.BAN": [{
+			"operator": "DummyCompany",
+			"duration": "323",
+			"price": "345",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"PAN.EST": {
+		"BAN.BAN": [{
+			"operator": "DummyCompany",
+			"duration": "542",
+			"price": "6774",
+			"times": ["6:30", "8:30", "10:30", "12:30"],
+			"warnings": ""
+		}]
+	},
+	"CEB.CEB.1": {
+		"BOH.TAG": [{
+			"operator": "OceanJet",
+			"duration": "120",
+			"price": "400",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}]
+	},
+	"CEB.BAT": {
+		"NEG.TAM": [{
+			"operator": "Maayo Shipping",
+			"duration": "55",
+			"price": "77",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}]
+	},
+	"NEG.TAM": {
+		"CEB.BAT": [{
+			"operator": "Maayo Shipping",
+			"duration": "55",
+			"price": "77",
+			"times": ["6:00", "7:00", "8:00", "9:00"],
+			"warnings": ""
+		}]
+	},
+	"SIQ.SIQ": {
+		"BOH.TAG": [{
+			"operator": null,
+			"duration": "",
+			"price": "",
+			"times": [""],
+			"warnings": ""
+		}]
+	}
+}

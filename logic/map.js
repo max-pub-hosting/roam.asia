@@ -1,5 +1,5 @@
 initMap = () => {
-	fetch('map.dark.json')
+	fetch('style/map.dark.json')
 		.then((response) => response.json())
 		.then((mapStyle) => {
 			IFRAME = document.querySelector('iframe');

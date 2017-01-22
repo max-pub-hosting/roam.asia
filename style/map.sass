@@ -1,0 +1,97 @@
+*
+	font-family: Helvetica
+	font-weight: 300
+
+body 
+	margin: 0
+	padding: 0
+
+#map 
+	position: absolute
+	top: 40px
+	left: 0
+	right: 0
+	bottom: 0
+
+header
+	position: absolute
+	top: 0
+	height: 40px
+	left: 0
+	right: 0
+	background: #333
+	color: white
+
+header>*
+	display: inline-block
+
+header b
+	font-size: 30px
+	padding: 3px
+
+aside
+	position: absolute
+	top: 40px
+	left: 0
+	width: 10cm
+	background: transparent
+
+	>*
+		opacity: 0.95
+		background: white
+		margin: 3px
+		width: 100%
+		border-collapse: collapse
+
+
+
+#from,#to
+	font-size: 25px
+	td
+		white-space: nowrap	
+
+	.icon 
+		width: 40px
+		color: gray
+		text-align: center
+	.region
+		color: silver
+	td
+		padding: 7px
+	.close 
+		width: 40px
+		color: gray
+		font-weight: bold
+		text-align: right
+		cursor: pointer
+
+
+
+#dates,#times
+	white-space: nowrap
+	overflow: scroll
+	div,a
+		width: 50px
+		overflow: hidden
+		padding: 7px
+		display: inline-block
+		text-align: center
+		cursor: pointer
+
+		span
+			display: block
+		.day,.month
+			color: gray
+		.date
+			font-size: 25px
+	a
+		font-size: 25px
+		sup
+			font-size: 17px
+			color: gray
+		.duration
+			font-size: 12px
+			color: silver
+
+
+

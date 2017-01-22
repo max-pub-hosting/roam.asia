@@ -41,23 +41,23 @@ main>*{
 	display: inline-block;
 	text-decoration: none;
 }
-#path{
+.path{
 	width: 100%;
 	border-collapse: collapse;
 	display: block;
 }
-#path td{
+.path td{
 	padding: 1px 3px;
 }
-#path .icon {
+.path .icon {
 	width: 40px;
 	color: gray;
 	text-align: center;
 }
-#path .region{
+.path .region{
 	color: silver;
 }
-#path .close {
+.path .close {
 	width: 40px;
 	color: gray;
 	font-weight: bold;
