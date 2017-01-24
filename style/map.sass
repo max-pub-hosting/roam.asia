@@ -1,10 +1,11 @@
 *
-	font-family: Helvetica
+	font-family: Quicksand
 	font-weight: 300
 
 body 
 	margin: 0
 	padding: 0
+	overflow: hidden
 
 #map 
 	position: absolute
@@ -33,7 +34,6 @@ aside
 	position: absolute
 	top: 40px
 	left: 0
-	width: 10cm
 	background: transparent
 
 	>*
@@ -43,6 +43,13 @@ aside
 		width: 100%
 		border-collapse: collapse
 
+@media (min-width:10cm)
+	aside
+		width: 10cm
+
+@media (max-width:10cm)
+	aside
+		right: 0
 
 
 #from,#to

@@ -13,6 +13,7 @@ initMap = () => {
 				zoom: 8,
 				disableDefaultUI: true,
 				zoomControl: true,
+				gestureHandling: 'greedy',
 				styles: mapStyle
 			});
 
