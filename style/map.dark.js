@@ -1,4 +1,4 @@
-[{
+MapStyle = [{
     "featureType": "all",
     "elementType": "labels.icon",
     "stylers": [{

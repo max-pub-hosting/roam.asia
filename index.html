@@ -3,27 +3,34 @@
 <meta name="mobile-web-app-capable" content="yes"/>
 
 <meta name="apple-mobile-web-app-capable" content="yes"/>
-<!-- <meta name="apple-mobile-web-app-status-bar-style" content="white"/> -->
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="roam.asia"/>
 
 <meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />
 
 
-<link href='https://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
 
 <title>roam.asia</title>
 
+<link href='https://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style/map.css">
+<script src='style/map.dark.js'></script>
+<script src='style/map.icon.js'></script>
+
 
 <script src='http://api.max.pub/polyfill/?fetch'></script>
 
 <script src='logic/map.js'></script>
-<script src='logic/marker.js'></script>
-<script src='logic/ports.js'></script>
+<script src='logic/map.marker.js'></script>
+<script src='logic/map.ports.js'></script>
+<script src='logic/side.html.js'></script>
+<script src='logic/times.js'></script>
+<script src='logic/flow.js'></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtx24rTJ_yVIdMFUZrUNO33FOKnbXjovA&callback=initMap" async defer></script>
-    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtx24rTJ_yVIdMFUZrUNO33FOKnbXjovA&callback=initMap" 
+    async defer></script>
+
+
 <body>
 
 	<header>
@@ -33,12 +40,15 @@
     <div id="map"></div>
 
     <aside>
-        <table id='from' class='path'></table>
-        <table id='to' class='path'></table>
+        <table id='origin'></table>
+        <table id='destination'></table>
         <!-- <table id='dates'></table> -->
         <!-- <table id='times'></table> -->
         <div id='dates'></div>
         <div id='times'></div>
+        <div id='classes'></div>
+        <div id='passengers'></div>
+        <div id='BuyButton'></div>
     </aside>
 
 </body>

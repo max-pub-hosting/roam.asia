@@ -7,12 +7,17 @@ body
 	padding: 0
 	overflow: hidden
 
+
+
 #map 
 	position: absolute
 	top: 40px
 	left: 0
 	right: 0
 	bottom: 0
+
+
+
 
 header
 	position: absolute
@@ -22,13 +27,17 @@ header
 	right: 0
 	background: #333
 	color: white
+	>*
+		display: inline-block
+	b
+		font-size: 30px
+		padding: 3px
 
-header>*
-	display: inline-block
 
-header b
-	font-size: 30px
-	padding: 3px
+
+
+
+
 
 aside
 	position: absolute
@@ -37,7 +46,7 @@ aside
 	background: transparent
 
 	>*
-		opacity: 0.95
+		opacity: 0.97
 		background: white
 		margin: 3px
 		width: 100%
@@ -52,7 +61,11 @@ aside
 		right: 0
 
 
-#from,#to
+
+
+
+
+#origin,#destination
 	font-size: 25px
 	td
 		white-space: nowrap	
@@ -74,10 +87,12 @@ aside
 
 
 
+
+
 #dates,#times
 	white-space: nowrap
 	overflow: scroll
-	div,a
+	div
 		width: 50px
 		overflow: hidden
 		padding: 7px
@@ -89,11 +104,9 @@ aside
 			display: block
 		.day,.month
 			color: gray
-		.date
+		.date,.time
 			font-size: 25px
-	a
-		font-size: 25px
-		sup
+		.time sup
 			font-size: 17px
 			color: gray
 		.duration
@@ -101,4 +114,56 @@ aside
 			color: silver
 
 
+
+
+
+
+#classes
+	white-space: nowrap
+	overflow: scroll
+	div
+		width: 100px
+		overflow: hidden
+		padding: 7px
+		display: inline-block
+		text-align: center
+		cursor: pointer
+
+		span
+			display: block
+		.class
+			color: silver
+		.className
+			color: black
+		.price
+			color: #afa
+			font-weight: bold
+
+
+
+
+
+#passengers div
+	font-size: 25px
+	padding: 7px
+	.price
+		float: right
+		color: #afa
+		font-weight: bold
+	.plus,.minus
+		cursor: pointer
+		background: #777
+		color: white
+		border-radius: 100px
+		padding: 0 5px
+
+
+
+
+
+#BuyButton div
+	padding: 7px
+	background: #aaf
+	color: white
+	font-size: 25px
 
