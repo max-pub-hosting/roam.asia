@@ -2,120 +2,110 @@ class Hash {
 
 	constructor() {
 		this.lastHash = '';
+		this.parts = 'origin/destination/date/time/fare/people'.split('/');
+		this.data = {};
 		setInterval(() => {
 			if (window.location.hash.substr(1) === this.lastHash) return;
-			this.updateApp(window.location.hash.substr(1), this.lastHash);
+			this.decode(window.location.hash.substr(1), this.lastHash);
 			this.lastHash = window.location.hash.substr(1);
 		}, 30);
 	}
-	setOrigin(portCode) {
-		this.origin = portCode;
-		this.destination = '';
-		this.date = '';
-		this.time = '';
-		this.updateHash();
-	}
-	setDestination(portCode) {
-		this.destination = portCode;
-		var D = TIMES.getDates(this.origin, this.destination);
-		this.date = D[1];
-		var T = TIMES.getTimes(this.origin, this.destination, D[1]);
-		this.time = T[0].split('|').slice(0, 2).join('|');;
-		this.updateHash();
-	}
-	setDate(date) {
-		this.date = date;
-		this.updateHash();
-	}
-	setTime(time) {
-		this.time = time;
-		this.updateHash();
-	}
-	updateHash() {
-		var parts = ['origin', 'destination', 'date', 'time'];
+
+
+
+	encode() {
 		var hash = '';
-		parts.forEach(part => {
-			if (this[part]) hash += '/' + this[part];
+		this.parts.forEach(part => {
+			if (this.data[part]) hash += '/' + this.data[part];
 		});
-		window.location.hash = '#' + hash; ///${this.origin}/${this.destination}`;
+		window.location.hash = '#' + hash;
 	}
-	truncate(pos) {
-		if (!pos) pos = 0;
-		window.location.hash = window.location.hash.split('/').slice(0, pos).join('/');
-	}
-
-
-
-	updateApp(newHash, oldHash) {
-		newHash = newHash.split("/");
-		oldHash = oldHash.split("/");
-		// console.log('updateApp', newHash, oldHash);
-		for (var i = 0; i < 5; i++)
-			if (newHash[i] != oldHash[i])
-				this.updatePart(i, newHash[i]);
+	decode(newHash, oldHash) {
+		newHash = newHash.split("/").slice(1);
+		oldHash = oldHash.split("/").slice(1);
+		for (var i = 0; i < this.parts.length; i++)
+			if (newHash[i] != oldHash[i]) {
+				this.data[this.parts[i]] = newHash[i];
+				// console.log('APP', this.parts[i], newHash[i]);
+				// console.log('---', APP[this.parts[i]]);
+				APP[this.parts[i]](newHash[i]);
+			}
 	}
 
-	updatePart(i, val) {
-		console.log('updatePart', i, val);
-		switch (i) {
-			case 1:
-				return this.updateOrigin(val);
-			case 2:
-				return this.updateDestination(val);
-			case 3:
-				return this.updateDates(val);
-			case 4:
-				return this.updateTimes(val);
-		}
+
+
+	get origin() {
+		return this.data.origin;
 	}
-	updateOrigin(portCode) {
-		this.origin = portCode;
-		PORTS.draw();
-		if (!portCode) return DOM.hideOrigin();
-		var P = BOAT.ports[portCode];
-		DOM.showOrigin(P.city, P.region);
+	set origin(portCode) {
+		this.data.origin = portCode;
+		this.clear(1);
+		this.encode();
 	}
 
-	updateDestination(portCode) {
-		this.destination = portCode;
-		PORTS.draw();
-		if (!portCode) return DOM.hideDestination();
-		var P = BOAT.ports[portCode];
-		DOM.showDestination(P.city, P.region);
+
+
+	get destination() {
+		return this.data.destination;
+	}
+	set destination(portCode) {
+		this.data.destination = portCode;
+		var D = DATA.getDates(this.origin, this.destination);
+		var T = DATA.getTimes(this.origin, this.destination, D[1]);
+		var C = DATA.getFares();
+		this.data.date = D[1];
+		this.data.time = T[0].split('|').slice(0, 2).join('|');
+		this.data.fare = C[0].name;
+		this.data.people = 1;
+		this.encode();
 	}
 
-	updateDates(date) {
-		console.log('updateDates', date);
-		this.date = date;
-		if (!date) return DOM.hideDates();
-		if (!DOM.hasDates())
-			DOM.showDates(TIMES.getDates(this.origin, this.destination));
-		DOM.setDate(date);
+
+
+	get date() {
+		return this.data.date;
+	}
+	set date(date) {
+		this.data.date = date;
+		this.encode();
 	}
 
-	updateTimes(time) {
-		console.log('updateTimes', time);
-		this.time = time;
-		if (!time) return DOM.hideTimes();
-		if (!DOM.hasTimes())
-			DOM.showTimes(TIMES.getTimes(this.origin, this.destination, this.date));
-		DOM.setTime(time);
 
-		DOM.showClasses(TIMES.getClasses());
-		DOM.showPassengers();
-		DOM.showBuyButton();
+
+	get time() {
+		return this.data.time;
+	}
+	set time(time) {
+		this.data.time = time;
+		this.encode();
 	}
 
+
+
+	get fare() {
+		return this.data.fare;
+	}
+	set fare(fare) {
+		this.data.fare = fare;
+		this.encode();
+	}
+
+
+
+	get people() {
+		return this.data.people;
+	}
+	set people(fare) {
+		this.data.people = people;
+		this.encode();
+	}
+
+
+
+	clear(start = 0) {
+		for (var i = start; i < this.parts.length; i++)
+			this.data[this.parts[i]] = '';
+		this.encode();
+	}
 
 }
-
-
-
-// addHashPart(val) {
-// 	if (val) return '/' + val;
-// 	else return '';
-// }
-// hash += this.addHashPart(this.origin);
-// hash += this.addHashPart(this.destination);
-// if (this.origin) hash += '/' + this.origin;
-// if (this.destination) hash += '/' + this.destination;

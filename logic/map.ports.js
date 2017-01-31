@@ -6,7 +6,7 @@ class Ports {
 		this.origin = '';
 		this.destination = '';
 
-		this.map.addListener('click', () => HASH.truncate());
+		this.map.addListener('click', () => HASH.clear());
 
 		// fetch('data/sea/ports.json')
 		// 	.then(response => response.json())
@@ -40,8 +40,9 @@ class Ports {
 			// console.log('action', this.origin);
 			if (HASH.origin)
 				if (BOAT.ports[HASH.origin].destinations.includes(portCode)) // valid target
-					return HASH.setDestination(portCode);
-			HASH.setOrigin(portCode);
+					return HASH.destination = portCode;
+			HASH.origin = portCode;
+			// HASH.setOrigin(portCode);
 		});
 	}
 
