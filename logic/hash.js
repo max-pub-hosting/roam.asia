@@ -54,7 +54,8 @@ class Hash {
 		var T = DATA.getTimes(this.origin, this.destination, D[1]);
 		var C = DATA.getFares();
 		this.data.date = D[1];
-		this.data.time = T[0].split('|').slice(0, 2).join('|');
+		// this.data.time = T[0].split('|').slice(0, 2).join('|');
+		this.data.time = T[0].split('|')[0];
 		this.data.fare = C[0].name;
 		this.data.people = 1;
 		this.encode();
@@ -95,7 +96,8 @@ class Hash {
 	get people() {
 		return this.data.people;
 	}
-	set people(fare) {
+	set people(people) {
+		if (people < 1) people = 1;
 		this.data.people = people;
 		this.encode();
 	}

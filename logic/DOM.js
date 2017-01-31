@@ -77,7 +77,8 @@ DOM = {
 			list.forEach(item => { // COD|HH:MM|DUR
 				var x = item.split('|');
 				var t = x[0].split(':');
-				var ref = x.slice(0, 2).join('|');
+				var ref = x[0];
+				// var ref = x.slice(0, 2).join('|');
 				OUT += `<div time='${ref}' onclick='HASH.time="${ref}";'>
 						<span class='time'>
 							${t[0]*1} <sup>${t[1]}</sup>
@@ -107,10 +108,16 @@ DOM = {
 			var OUT = '';
 			list.forEach(item => { // CLASS|PRICE
 				OUT += `<div fare='${item.name}'>
-						<span class='fare'>${item.name}</span>
-						<span class='class'>class</span>
-						<span class='price'>${item.price} PHP</span>
-					</div>`;
+							<div class='operator'>${item.operator}</div>
+							<div>
+								<span class='fare'>${item.name}</span>
+								<span class='class'>class</span>
+							</div>
+							<div>
+								<span class='duration'>${item.duration} min</span>
+								<span class='price'>${item.price} PHP</span>
+							</div>
+						</div>`;
 
 			});
 			$('#fares').innerHTML = OUT;
@@ -126,15 +133,22 @@ DOM = {
 		show: () => {
 			$('#people').innerHTML = `
 				<div>
-					<span class='minus'>-</span> 
+					<span class='minus' onclick="HASH.people--">-</span> 
 					<span class='count'>1</span> 
 					<span class='passenger'>P</span> 
-					<span class='plus'>+</span> 
-					<span class='price'>400 PHP</span> 
+					<span class='plus' onclick="HASH.people++">+</span> 
+					<span class='price'>400 </span> 
+					<span class='currency'>PHP</span> 
 				</div>`;
 		},
 		hide: () => {
 			$('#people').innerHTML = '';
+		},
+		count: (count) => {
+			$('#people .count').innerHTML = count;
+		},
+		price: (price) => {
+			$('#people .price').innerHTML = price;
 		}
 	},
 

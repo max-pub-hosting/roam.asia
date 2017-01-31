@@ -117,6 +117,7 @@ aside
 		.duration
 			font-size: 12px
 			color: silver
+			display: none
 
 		&.selected
 			>.date
@@ -135,23 +136,27 @@ aside
 #fares
 	white-space: nowrap
 	overflow: scroll
-	div
-		width: 100px
+	>div
+		width: 120px
 		overflow: hidden
 		padding: 7px
 		display: inline-block
 		text-align: center
 		cursor: pointer
 
-		span
-			display: block
 		.class
 			color: silver
+			display: none
 		.fare
 			color: black
+			font-weight: 500
+			font-size: 20px
 		.price
 			color: #afa
 			font-weight: 500
+		.duration
+			color: gray
+			display: none
 
 		&.selected
 			>.fare
@@ -166,7 +171,7 @@ aside
 #people div
 	font-size: 25px
 	padding: 7px
-	.price
+	.price,.currency
 		float: right
 		color: #afa
 		font-weight: 500

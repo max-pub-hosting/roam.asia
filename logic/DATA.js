@@ -52,11 +52,15 @@ class DATA {
 
 	static getFares() {
 		return [{
+			operator: 'Ocean Jet',
 			name: 'Tourist',
-			price: 400
+			price: 400,
+			duration: 90
 		}, {
+			operator: 'Ocean Jet',
 			name: 'Business',
-			price: 700
+			price: 700,
+			duration: 90
 		}];
 	}
 }

@@ -47,6 +47,8 @@ class APP {
 	static people(people) {
 		console.log('APP.people', people);
 		if (!people) return DOM.people.hide();
+		DOM.people.count(people);
+		DOM.people.price(people * 400);
 	}
 
 
