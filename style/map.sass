@@ -1,3 +1,5 @@
+$selection: #aaf
+
 *
 	font-family: Quicksand
 	font-weight: 300
@@ -46,9 +48,9 @@ aside
 	background: transparent
 
 	>*
-		opacity: 0.97
+		opacity: 0.99
 		background: white
-		margin: 3px
+		margin: 2px
 		width: 100%
 		border-collapse: collapse
 
@@ -74,6 +76,8 @@ aside
 		width: 40px
 		color: gray
 		text-align: center
+	.city
+		color: $selection
 	.region
 		color: silver
 	td
@@ -113,6 +117,15 @@ aside
 			font-size: 12px
 			color: silver
 
+		&.selected
+			>.date
+				color: $selection
+			>.month
+				color: $selection
+			>.time
+				color: $selection
+				sup
+					color: $selection
 
 
 
@@ -138,6 +151,12 @@ aside
 		.price
 			color: #afa
 			font-weight: bold
+
+		&.selected
+			>.className
+				color: $selection
+			>.class
+				color: $selection
 
 
 
@@ -166,4 +185,6 @@ aside
 	background: #aaf
 	color: white
 	font-size: 25px
+	cursor: pointer
+	text-align: center
 

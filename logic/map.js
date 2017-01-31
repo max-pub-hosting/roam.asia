@@ -13,9 +13,9 @@ initMap = () => {
 		styles: MapStyle
 	});
 
+	HASH = new Hash();
 	PORTS = new Ports(MAP);
-	TIMES = new Times();
-	FLOW = new Flow();
+	// TIMES = new Times();
 }
 
 

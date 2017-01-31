@@ -6,27 +6,28 @@ class Ports {
 		this.origin = '';
 		this.destination = '';
 
-		this.map.addListener('click', () => this.reset());
+		this.map.addListener('click', () => HASH.truncate());
 
-		fetch('data/sea/ports.json')
-			.then(response => response.json())
-			.then(ports => {
-				this.ports = ports;
-				this.addMarkers();
-			});
+		// fetch('data/sea/ports.json')
+		// 	.then(response => response.json())
+		// 	.then(ports => {
+		// 		BOAT.ports = ports;
+		// 		this.addMarkers();
+		// 	});
+		this.addMarkers();
 	}
 
-	onOriginChange(f) {
-		this._originChange = f;
-	}
+	// onOriginChange(f) {
+	// 	this._originChange = f;
+	// }
 
-	onDestinationChange(f) {
-		this._destinationChange = f;
-	}
+	// onDestinationChange(f) {
+	// 	this._destinationChange = f;
+	// }
 
 	addMarkers() {
-		for (var portCode in this.ports) {
-			var p = this.ports[portCode];
+		for (var portCode in BOAT.ports) {
+			var p = BOAT.ports[portCode];
 			this.markers[portCode] = new Marker(this.map, p.lat, p.lon);
 			this.markerAction(portCode);
 		}
@@ -37,59 +38,71 @@ class Ports {
 		// this.markers[portCode].addListener('click', () => {
 		this.markers[portCode].onTap(() => {
 			// console.log('action', this.origin);
-			if (this.origin)
-				if (this.ports[this.origin].destinations.includes(portCode)) // valid target
-					return this.setDestination(portCode);
-			this.setOrigin(portCode);
+			if (HASH.origin)
+				if (BOAT.ports[HASH.origin].destinations.includes(portCode)) // valid target
+					return HASH.setDestination(portCode);
+			HASH.setOrigin(portCode);
 		});
 	}
 
-
-
-	setOrigin(portCode) {
-		console.log("setOrigin ", portCode);
-		this.reset()
-
-		this.origin = portCode;
-		this.markers[portCode].set('origin');
-
-		this.ports[portCode].destinations.forEach(P => {
-			console.log("possible", P);
-			this.markers[P].set('directConnection');
-		});
-
-		// for (var P in this.ports[portCode].destinations) // possible targets
-		// console.log("possible", P);
-		// if (this.markers[P])
-		// this.markers[P].set('directConnections')
-
-		this._originChange(portCode);
+	draw() {
+		for (var portCode in this.markers) {
+			var P = this.markers[portCode];
+			if (portCode == HASH.origin) P.set('origin');
+			else if (portCode == HASH.destination) P.set('destination');
+			else if (BOAT.ports[portCode].destinations.includes(HASH.origin)) P.set('directConnection');
+			else P.set('default');
+		}
 	}
 
 
-	setDestination(portCode) {
-		console.log("setDestination ", portCode);
-		if (this.destination) // reset last selection
-			this.markers[this.destination].set('directConnection');
+	// setOrigin(portCode) {
+	// 	console.log("setOrigin ", portCode);
+	// 	this.reset()
 
-		this.destination = portCode;
-		this.markers[this.destination].set('destination');
+	// 	this.origin = portCode;
+	// 	this.markers[portCode].set('origin');
 
-		this._destinationChange(portCode);
-	}
+	// 	BOAT.ports[portCode].destinations.forEach(P => {
+	// 		console.log("possible", P);
+	// 		this.markers[P].set('directConnection');
+	// 	});
+
+	// 	// for (var P in BOAT.ports[portCode].destinations) // possible targets
+	// 	// console.log("possible", P);
+	// 	// if (this.markers[P])
+	// 	// this.markers[P].set('directConnections')
+
+	// 	HASH.setOrigin(portCode);
+	// 	// this._originChange(portCode);
+	// }
 
 
-	reset(color, size) {
-		console.log('reset all');
+	// setDestination(portCode) {
+	// 	console.log("setDestination ", portCode);
+	// 	if (this.destination) // reset last selection
+	// 		this.markers[this.destination].set('directConnection');
 
-		this.origin = '';
-		this.destination = '';
+	// 	this.destination = portCode;
+	// 	this.markers[this.destination].set('destination');
 
-		for (var P in this.markers)
-			this.markers[P].set('default');
+	// 	HASH.setDestination(portCode);
+	// 	// this._destinationChange(portCode);
+	// }
 
-		this._originChange(null);
-		this._destinationChange(null);
-	}
+
+	// reset(color, size) {
+	// 	console.log('reset all');
+
+	// 	// this.origin = '';
+	// 	// this.destination = '';
+
+	// 	for (var P in this.markers)
+	// 		this.markers[P].set('default');
+
+	// 	HASH.truncate(0);
+	// 	// this._originChange(null);
+	// 	// this._destinationChange(null);
+	// }
 
 }
