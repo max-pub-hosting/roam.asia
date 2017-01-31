@@ -29,14 +29,14 @@ MapStyle = [{
         "visibility": "off"
     }]
 }, {
-    "featureType": "administrative.country",
+    "featureType": "administrative.province",
     "elementType": "labels",
     "stylers": [{
-        "visibility": "on"
+        "visibility": "off"
     }, {
-        "color": "#ff0000"
+        "color": "#aaa"
     }, {
-        "weight": "7"
+        "weight": "1"
     }]
 }, {
     "featureType": "administrative.locality",

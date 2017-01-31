@@ -101,6 +101,7 @@ class Hash {
 			DOM.showTimes(TIMES.getTimes(this.origin, this.destination, this.date));
 		DOM.setTime(time);
 
+		DOM.showClasses(TIMES.getClasses());
 		DOM.showPassengers();
 		DOM.showBuyButton();
 	}
