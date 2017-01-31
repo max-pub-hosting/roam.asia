@@ -45,7 +45,7 @@ DOM = {
 			var OUT = '';
 			list.forEach(date => { // YYYY-MM-DD
 				var d = new Date(Date.parse(date));
-				OUT += `<div date='${date}' onclick='HASH.setDate("${date}");'>
+				OUT += `<div date='${date}' onclick='HASH.date="${date}";'>
 						<span class='day'>${days[d.getDay()]}</span>
 						<span class='date'>${d.getDate()}</span>
 						<span class='month'>${months[d.getMonth()]}</span>			
@@ -78,7 +78,7 @@ DOM = {
 				var x = item.split('|');
 				var t = x[0].split(':');
 				var ref = x.slice(0, 2).join('|');
-				OUT += `<div time='${ref}' onclick='HASH.setTime("${ref}");'>
+				OUT += `<div time='${ref}' onclick='HASH.time="${ref}";'>
 						<span class='time'>
 							${t[0]*1} <sup>${t[1]}</sup>
 						</span>
