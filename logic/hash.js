@@ -23,11 +23,11 @@ class Hash {
 	decode(newHash, oldHash) {
 		newHash = newHash.split("/").slice(1);
 		oldHash = oldHash.split("/").slice(1);
+		for (var i = 0; i < this.parts.length; i++) // update the data-dict first
+			this.data[this.parts[i]] = newHash[i];
 		for (var i = 0; i < this.parts.length; i++)
-			if (newHash[i] != oldHash[i]) {
-				this.data[this.parts[i]] = newHash[i];
-				// console.log('APP', this.parts[i], newHash[i]);
-				// console.log('---', APP[this.parts[i]]);
+			if (newHash[i] != oldHash[i]) { // then update the APP-vis...
+				console.log('APP', this.parts[i], newHash[i]);
 				APP[this.parts[i]](newHash[i]);
 			}
 	}
@@ -50,14 +50,10 @@ class Hash {
 	}
 	set destination(portCode) {
 		this.data.destination = portCode;
-		var D = DATA.getDates(this.origin, this.destination);
-		var T = DATA.getTimes(this.origin, this.destination, D[1]);
-		var C = DATA.getFares();
-		this.data.date = D[1];
-		// this.data.time = T[0].split('|').slice(0, 2).join('|');
-		this.data.time = T[0].split('|')[0];
-		this.data.fare = C[0].name;
-		this.data.people = 1;
+		this.data.date = DATA.getDate(); // pre-selection
+		this.data.time = DATA.getTime(); // pre-selection
+		this.data.fare = DATA.getFare(); // pre-selection
+		if (!this.data.people) this.data.people = 1; // pre-selection
 		this.encode();
 	}
 
@@ -111,3 +107,13 @@ class Hash {
 	}
 
 }
+
+
+
+// var D = DATA.getDates(this.origin, this.destination);
+// var T = DATA.getTimes(this.origin, this.destination, D[1]);
+// var C = DATA.getFares();
+// this.data.date = D[1];
+// this.data.time = T[0].split('|')[0];
+// this.data.fare = C[0].opCode + ':' + C[0].name;
+// this.data.time = T[0].split('|').slice(0, 2).join('|');
