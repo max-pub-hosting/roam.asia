@@ -1,11 +1,21 @@
 MapIcon = {
 
+	inert: {
+		icon: 'circle',
+		scale: 2,
+		fillColor: 'red',
+		fillOpacity: 1.0,
+		strokeWeight: 0,
+		strokeColor: '#fff',
+		strokeOpacity: 1.0,
+	},
+
 	default: {
 		icon: 'circle',
 		scale: 5,
 		fillColor: '#ff0',
 		fillOpacity: 1.0,
-		strokeWeight: 2,
+		strokeWeight: 0,
 		strokeColor: '#fff',
 		strokeOpacity: 1.0,
 	},
@@ -15,11 +25,11 @@ MapIcon = {
 		scale: 9,
 		fillColor: '#f00',
 		fillOpacity: 1.0,
-		strokeWeight: 2,
+		strokeWeight: 0,
 		strokeColor: '#fff',
 		strokeOpacity: 1.0,
 		text: 'A',
-		fontColor: '#fff'
+		textColor: '#fff'
 	},
 
 	destination: {
@@ -27,19 +37,19 @@ MapIcon = {
 		scale: 9,
 		fillColor: '#f00',
 		fillOpacity: 1.0,
-		strokeWeight: 2,
+		strokeWeight: 0,
 		strokeColor: '#fff',
 		strokeOpacity: 1.0,
 		text: 'B',
-		fontColor: '#fff'
+		textColor: '#fff'
 	},
 
 	directConnection: {
 		icon: 'circle',
-		scale: 5,
+		scale: 7,
 		fillColor: '#f00',
 		fillOpacity: 1.0,
-		strokeWeight: 2,
+		strokeWeight: 0,
 		strokeColor: '#fff',
 		strokeOpacity: 1.0,
 	},

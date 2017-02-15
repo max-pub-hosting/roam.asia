@@ -88,7 +88,8 @@ DOM = {
 				var t = item.split(':');
 				OUT += `<div time='${item}' onclick='HASH.time="${item}";'>
 							<span class='time'>
-								${t[0]*1} <sup>${t[1]}</sup>
+								<span class='hour'> ${t[0]*1} </span>
+								<span class='minute'> :${t[1]} </span>
 							</span>
 						</div>`;
 			});

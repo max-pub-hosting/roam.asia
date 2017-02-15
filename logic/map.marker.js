@@ -1,17 +1,17 @@
 class Marker {
 
-	constructor(map, lat, lon) {
+	constructor(map, lat, lon, icon = 'default') {
 		this.marker = new google.maps.Marker({
 			map: map,
 			position: new google.maps.LatLng(lat, lon),
 			// title: portCode,
 			// icon: this.icon('default')
 		});
-		this.set('default');
+		this.set(icon);
 	}
 
 	set(name) {
-		// console.log('setIcon', name);
+		console.log('setIcon', name);
 		var icon = MapIcon[name];
 		if (!icon) return;
 		if (!icon.path) icon.path = google.maps.SymbolPath[icon.icon.toUpperCase()];

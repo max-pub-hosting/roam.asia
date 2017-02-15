@@ -1,6 +1,6 @@
 <?
 echo "loading TimeTable ...\n";
-$times = json_decode(file_get_contents('http://api.max.pub/google/sheet/?doc=1ECowHw9wDaUt0AevWPutQnk3enmoB551st7VjXxzsl8&colNames&colNamesCC'),1);
+$times = json_decode(file_get_contents('http://api.max.pub/google/sheet/?doc=1ECowHw9wDaUt0AevWPutQnk3enmoB551st7VjXxzsl8&gid=1047213582&colNames&colNamesCC'),1);
 
 echo "loading Ports ...\n";
 $ports = json_decode(file_get_contents('http://api.max.pub/google/sheet/?doc=1ECowHw9wDaUt0AevWPutQnk3enmoB551st7VjXxzsl8&gid=575777383&colNames&rowNames&colNamesCC'),1);

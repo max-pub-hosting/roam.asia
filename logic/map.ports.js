@@ -5,6 +5,7 @@ class Ports {
 		this.markers = {};
 		this.origin = '';
 		this.destination = '';
+		this.changed = [];
 
 		this.map.addListener('click', () => HASH.clear());
 
@@ -28,8 +29,16 @@ class Ports {
 	addMarkers() {
 		for (var portCode in BOAT.ports) {
 			var p = BOAT.ports[portCode];
-			this.markers[portCode] = new Marker(this.map, p.lat, p.lon);
-			this.markerAction(portCode);
+			if (p.destinations.length) {
+				this.markers[portCode] = new Marker(this.map, p.lat, p.lon, 'default');
+				this.markerAction(portCode);
+			} else {
+				this.markers[portCode] = new Marker(this.map, p.lat, p.lon, 'inert');
+			}
+
+			// this.markers[portCode].set('inert');
+
+			// console.log('length', p.destinations.length);
 		}
 	}
 
@@ -47,13 +56,35 @@ class Ports {
 	}
 
 	draw() {
-		for (var portCode in this.markers) {
-			var P = this.markers[portCode];
-			if (portCode == HASH.origin) P.set('origin');
-			else if (portCode == HASH.destination) P.set('destination');
-			else if (BOAT.ports[portCode].destinations.includes(HASH.origin)) P.set('directConnection');
-			else P.set('default');
+		for (var i = 0; i < this.changed.length; i++)
+			this.markers[this.changed[i]].set('default');
+		this.changed = [];
+
+		if (HASH.origin) {
+			this.markers[HASH.origin].set('origin');
+			this.changed.push(HASH.origin);
+			console.log(HASH.origin, BOAT.ports[HASH.origin].destinations);
+			for (var i = 0; i < BOAT.ports[HASH.origin].destinations.length; i++) {
+				var portCode = BOAT.ports[HASH.origin].destinations[i];
+				console.log('cc', portCode);
+				this.markers[portCode].set('directConnection');
+				this.changed.push(portCode);
+			}
 		}
+
+		if (HASH.destination) {
+			this.markers[HASH.destination].set('destination');
+			this.changed.push(HASH.destination);
+		}
+
+		// return;
+		// for (var portCode in this.markers) {
+		// 	var P = this.markers[portCode];
+		// 	if (portCode == HASH.origin) P.set('origin');
+		// 	else if (portCode == HASH.destination) P.set('destination');
+		// 	else if (BOAT.ports[portCode].destinations.includes(HASH.origin)) P.set('directConnection');
+		// 	else P.set('default');
+		// }
 	}
 
 

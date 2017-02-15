@@ -106,16 +106,18 @@ aside
 		text-align: center
 		cursor: pointer
 
-		span
+		>span
 			display: block
 		.day,.month
 			color: gray
 			font-size: 12px
 		.date,.time
 			font-size: 25px
-		.time sup
-			font-size: 17px
-			color: gray
+		.time .minute
+			font-size: 25px
+			color: silver
+			margin-left: -8px
+			font-weight: 100
 		.duration
 			font-size: 12px
 			color: silver
@@ -128,14 +130,15 @@ aside
 			>.month,>.day
 				color: $selection
 			>.time
-				color: $selection
-				font-weight: 600
-				sup
+				.hour
+					color: $selection
+					font-weight: 600
+				.minute
 					color: $selection
 
 
-
-
+#times>div
+	width: 60px
 
 #fares
 	white-space: nowrap
